@@ -9,6 +9,7 @@
 
 	/**
 	 *	Append query on click
+	 *	Super duper simple version
 	 **/
 	!function() {
 		var playground = document.getElementById('playground'),
@@ -43,6 +44,7 @@
 	 *	Lets try some fun stuff base on some params
 	 **/
 	if(getParam('location')) {
+		// if location param exists,		
 		var locText = document.querySelector('b[data="location"]');
 		locText.innerText = 'there';
 		console.log(locText);
