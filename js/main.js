@@ -6,7 +6,9 @@
 	!function(gv) {
 		// place global variables here
 	}(G);
-
+	/* ========================================
+		JS Playground
+	======================================== */
 	/**
 	 *	Append query on click
 	 *	Super duper simple version
@@ -23,7 +25,6 @@
 				var qHref = this.attributes[0].value + query;
 				document.location.href = qHref;
 			}, false);
-			console.log(locThere);
 		}
 	}();
 	/**
@@ -36,7 +37,6 @@
 			result = regx.exec(window.location.href);		
 		// returns only the param
 		if(result) {
-			console.log(result[1]);
 			return result[1];
 		}
 	}
@@ -44,9 +44,8 @@
 	 *	Lets try some fun stuff base on some params
 	 **/
 	if(getParam('location')) {
-		// if location param exists,		
-		var locText = document.querySelector('b[data="location"]');
-		locText.innerText = 'there';
-		console.log(locText);
+		// if location param exists		
+		var locText = document.querySelector('[data="location"]');
+		locText.innerText = getParam('location');
 	}
 }();
